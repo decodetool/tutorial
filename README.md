@@ -1,5 +1,7 @@
 # Trip Share
 
+> The simple app used in Decode's on-boarding tutorial.
+
 A modern, mobile-first trip planning web app with interactive maps, micro-itineraries, and lightweight social features.
 
 ## ✨ Features
