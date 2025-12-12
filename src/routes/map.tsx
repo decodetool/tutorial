@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { mockApi } from '@/lib/mock-api';
 import { useMapStore } from '@/stores/useMapStore';
-import { Filter, MapPin } from 'lucide-react';
+import { Filter } from 'lucide-react';
 import type { Category } from '@/types';
 import { Map } from '@/components/Map';
 import { PlaceDetailSheet } from '@/components/PlaceDetailSheet';

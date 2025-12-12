@@ -2,14 +2,14 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { mockApi } from '@/lib/mock-api';
-import { ArrowLeft, MapPin, Plus, Star } from 'lucide-react';
+import { ArrowLeft, Plus, Star } from 'lucide-react';
 import { useState } from 'react';
 import { PlaceDetailSheet } from '@/components/PlaceDetailSheet';
 import type { Category } from '@/types';
 
 export const Route = createFileRoute('/cities/$cityId')({
   component: CityDetailComponent,
-  beforeLoad: ({ params }) => {
+  beforeLoad: () => {
     document.title = `City - Journeys`;
   },
 });

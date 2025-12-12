@@ -37,7 +37,7 @@ pnpm dev
 pnpm build
 ```
 
-Visit `http://localhost:5173` to see the app.
+Visit `http://localhost:5179` to see the app.
 
 ## 📱 Screens
 

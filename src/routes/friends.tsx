@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
-import { Users, UserPlus, Clock, Share2 } from 'lucide-react';
+import { Users, UserPlus, Clock } from 'lucide-react';
 
 export const Route = createFileRoute('/friends')({
   component: FriendsComponent,

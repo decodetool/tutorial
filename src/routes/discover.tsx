@@ -7,6 +7,7 @@ import { Search, MapPin, X } from 'lucide-react';
 import { CityCardSkeleton } from '@/components/LoadingSkeleton';
 import { CityDetailSheet } from '@/components/CityDetailSheet';
 import { PlaceDetailSheet } from '@/components/PlaceDetailSheet';
+import { useState } from 'react';
 
 export const Route = createFileRoute('/discover')({
   component: DiscoverComponent,
@@ -253,10 +254,3 @@ function CityCard({ city, index }: { city: City; index: number }) {
     </motion.div>
   );
 }
-
-function useState<T>(initialValue: T): [T, (value: T) => void] {
-  const [state, setState] = React.useState(initialValue);
-  return [state, setState];
-}
-
-import React from 'react';

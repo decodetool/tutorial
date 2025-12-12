@@ -192,19 +192,6 @@ function TripTimelineCard({
   index: number;
   onClick: () => void;
 }) {
-  const formatDateRange = () => {
-    const start = new Date(trip.startDate);
-    const end = new Date(trip.endDate);
-    const startDay = start.getDate();
-    const endDay = end.getDate();
-
-    // If same month
-    if (start.getMonth() === end.getMonth()) {
-      return `${startDay}-${endDay}`;
-    }
-    return `${start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - ${end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
-  };
-
   const getDuration = () => {
     const start = new Date(trip.startDate);
     const end = new Date(trip.endDate);

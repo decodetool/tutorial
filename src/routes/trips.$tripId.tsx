@@ -14,6 +14,7 @@ import {
   Share2,
   Package,
 } from 'lucide-react';
+import type { Trip, ItineraryItem, Place } from '@/types';
 
 export const Route = createFileRoute('/trips/$tripId')({
   component: TripDetailComponent,
@@ -143,14 +144,21 @@ function TripDetailComponent() {
           <OverviewTab trip={trip} itinerary={itinerary} places={places} navigate={navigate} />
         )}
         {activeTab === 'budget' && <BudgetTab trip={trip} />}
-        {activeTab === 'packing' && <PackingTab trip={trip} />}
+        {activeTab === 'packing' && <PackingTab />}
         {activeTab === 'sharing' && <SharingTab trip={trip} />}
       </div>
     </div>
   );
 }
 
-function OverviewTab({ trip, itinerary, places, navigate }: any) {
+interface OverviewTabProps {
+  trip: Trip;
+  itinerary: ItineraryItem[];
+  places: Place[];
+  navigate: ReturnType<typeof useNavigate>;
+}
+
+function OverviewTab({ trip, itinerary, places, navigate }: OverviewTabProps) {
   const formatDate = (dateStr: string) => {
     return new Date(dateStr).toLocaleDateString('en-US', {
       month: 'long',
@@ -189,7 +197,7 @@ function OverviewTab({ trip, itinerary, places, navigate }: any) {
               <p className="text-text-secondary text-sm">Travelers</p>
               <div className="flex items-center gap-2 mt-1">
                 <div className="flex -space-x-2">
-                  {trip.travelers.map((traveler: any, i: number) => (
+                  {trip.travelers.map((traveler, i: number) => (
                     <div
                       key={i}
                       className="w-8 h-8 rounded-full border-2 border-surface overflow-hidden bg-surface"
@@ -205,7 +213,7 @@ function OverviewTab({ trip, itinerary, places, navigate }: any) {
                   ))}
                 </div>
                 <span className="text-text-primary font-medium">
-                  {trip.travelers.map((t: any) => t.name).join(', ')}
+                  {trip.travelers.map((t) => t.name).join(', ')}
                 </span>
               </div>
             </div>
@@ -240,8 +248,8 @@ function OverviewTab({ trip, itinerary, places, navigate }: any) {
 
           {/* Compact timeline visualization */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {itinerary.slice(0, 8).map((item: any, idx: number) => {
-              const place = places?.find((p: any) => p.id === item.placeId);
+            {itinerary.slice(0, 8).map((item, idx: number) => {
+              const place = places?.find((p) => p.id === item.placeId);
               return (
                 <div key={item.id} className="flex items-center gap-2 shrink-0">
                   <div className="w-10 h-10 rounded-xl overflow-hidden bg-white/10 border border-white/20 flex-shrink-0">
@@ -273,7 +281,7 @@ function OverviewTab({ trip, itinerary, places, navigate }: any) {
   );
 }
 
-function BudgetTab({ trip }: any) {
+function BudgetTab({ trip }: { trip: Trip }) {
   return (
     <div className="space-y-6">
       <div className="bg-surface rounded-3xl p-6 border border-white/5">
@@ -312,7 +320,7 @@ function BudgetTab({ trip }: any) {
   );
 }
 
-function PackingTab({ trip }: any) {
+function PackingTab() {
   const mockPackingItems = [
     { id: 1, name: 'Passport', packed: true },
     { id: 2, name: 'Travel adapter', packed: true },
@@ -360,13 +368,13 @@ function PackingTab({ trip }: any) {
   );
 }
 
-function SharingTab({ trip }: { trip: any }) {
+function SharingTab({ trip }: { trip: Trip }) {
   return (
     <div className="space-y-6">
       <div className="bg-surface rounded-3xl p-6 border border-white/5">
         <h2 className="text-xl font-semibold text-text-primary mb-4">Shared With</h2>
         <div className="space-y-3">
-          {trip.travelers.map((traveler: any) => (
+          {trip.travelers.map((traveler) => (
             <div key={traveler.id} className="flex items-center gap-3 p-3 bg-white/5 rounded-2xl">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-accent-teal to-accent-cyan flex-shrink-0">
                 {traveler.avatar ? (

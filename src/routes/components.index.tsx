@@ -3,20 +3,14 @@ import { motion } from 'framer-motion';
 import {
   MapPin,
   Users,
-  Calendar,
-  DollarSign,
   ArrowRight,
-  MessageCircle,
   Heart,
   Plane,
-  Plus,
-  Check,
   User,
-  Bell,
   ChevronRight,
 } from 'lucide-react';
 import { Tabs } from '@/components/ui/Tabs';
-import type { Trip, User as UserType, Message, Activity } from '@/types';
+import type { Trip, Message } from '@/types';
 
 export const Route = createFileRoute('/components/')({
   component: ComponentGalleryComponent,
@@ -195,12 +189,6 @@ function ComponentPreview({ componentId, mini = false }: { componentId: string; 
     updatedAt: '2024-01-20',
   };
 
-  const mockUser: UserType = {
-    id: '1',
-    name: 'Sarah Chen',
-    avatar: '',
-  };
-
   const mockMessage: Message = {
     id: 'msg-1',
     conversationId: 'conv-1',
@@ -208,14 +196,6 @@ function ComponentPreview({ componentId, mini = false }: { componentId: string; 
     text: 'Hey! Are we still on for Tokyo next month?',
     timestamp: new Date('2024-01-20T10:30:00'),
     read: true,
-  };
-
-  const mockActivity: Activity = {
-    id: 'act-1',
-    userId: '1',
-    type: 'trip_created',
-    data: { tripName: 'Tokyo Adventure', destination: 'Tokyo, Japan' },
-    timestamp: new Date('2024-01-20T10:00:00'),
   };
 
   switch (componentId) {
@@ -229,13 +209,13 @@ function ComponentPreview({ componentId, mini = false }: { componentId: string; 
       return <MessageBubbleExample message={mockMessage} mini={mini} />;
 
     case 'MessageBubbleVariants':
-      return <MessageBubbleVariantsExample mini={mini} />;
+      return <MessageBubbleVariantsExample />;
 
     case 'ConversationItem':
       return <ConversationItemExample mini={mini} />;
 
     case 'ActivityCard':
-      return <ActivityCardExample activity={mockActivity} mini={mini} />;
+      return <ActivityCardExample />;
 
     case 'TabsComponent':
       return <TabsComponentExample mini={mini} />;
@@ -361,7 +341,7 @@ function MessageBubbleExample({ message, mini }: { message: Message; mini?: bool
   );
 }
 
-function MessageBubbleVariantsExample({ mini }: { mini?: boolean }) {
+function MessageBubbleVariantsExample() {
   return (
     <div className="space-y-3">
       {/* Received */}
@@ -417,7 +397,7 @@ function ConversationItemExample({ mini }: { mini?: boolean }) {
   );
 }
 
-function ActivityCardExample({ activity, mini }: { activity: Activity; mini?: boolean }) {
+function ActivityCardExample() {
   return (
     <div>
       <div className="flex gap-3 p-4 bg-surface rounded-xl border border-white/5">

@@ -122,7 +122,7 @@ export const mockApi = {
     return { ...existing, ...updates };
   },
 
-  async deleteItineraryItem(_id: string): Promise<void> {
+  async deleteItineraryItem(): Promise<void> {
     await sleep(LATENCY);
   },
 };

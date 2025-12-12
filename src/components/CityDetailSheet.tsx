@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { X, MapPin, Calendar, Users } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 import type { City, Place } from '@/types';
 import { BottomSheet } from './ui/BottomSheet';
-import { Map } from './Map';
 import { useState } from 'react';
 
 interface CityDetailSheetProps {
@@ -10,10 +9,9 @@ interface CityDetailSheetProps {
   places: Place[];
   isOpen: boolean;
   onClose: () => void;
-  onPlaceClick?: (placeId: string) => void;
 }
 
-export function CityDetailSheet({ city, places, isOpen, onClose, onPlaceClick }: CityDetailSheetProps) {
+export function CityDetailSheet({ city, places, isOpen, onClose }: CityDetailSheetProps) {
   const [imageError, setImageError] = useState(false);
 
   // Filter places for this city
@@ -103,17 +101,4 @@ export function CityDetailSheet({ city, places, isOpen, onClose, onPlaceClick }:
       </div>
     </BottomSheet>
   );
-}
-
-function getCategoryEmoji(category: string): string {
-  const emojis: Record<string, string> = {
-    food: '🍽️',
-    museum: '🏛️',
-    cafe: '☕',
-    landmark: '🗿',
-    transit: '🚇',
-    nightlife: '🌃',
-    shopping: '🛍️',
-  };
-  return emojis[category] || '📍';
 }

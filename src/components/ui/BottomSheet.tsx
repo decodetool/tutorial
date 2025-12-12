@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import { Sheet } from '@silk-hq/components';
 import './BottomSheet.css';
 
@@ -18,7 +18,6 @@ export function BottomSheet({
   className = '',
 }: BottomSheetProps) {
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const [restingOutside, setRestingOutside] = useState(false);
   const hasOpenedRef = useRef(false);
 
   // Programmatically trigger the sheet when isOpen changes
@@ -68,7 +67,8 @@ export function BottomSheet({
 // Compound component pattern for trigger
 BottomSheet.Trigger = Sheet.Trigger;
 
-// Controlled version
+// Controlled version - helper hook for advanced usage
+// eslint-disable-next-line react-refresh/only-export-components
 export function useBottomSheet() {
   return {
     Root: Sheet.Root,

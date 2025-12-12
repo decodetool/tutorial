@@ -26,7 +26,7 @@ function ActivityFeedComponent() {
     }
   };
 
-  const getActivityText = (activity: any) => {
+  const getActivityText = (activity: Activity) => {
     switch (activity.type) {
       case 'trip_created':
         return (

@@ -2,7 +2,6 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
 import { mockApi } from '@/lib/mock-api';
-import { useState } from 'react';
 import { Calendar, Clock, MapPin, Plus } from 'lucide-react';
 import type { ItineraryItem, Place } from '@/types';
 

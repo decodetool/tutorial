@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Place, Category } from '@/types';
@@ -18,9 +18,6 @@ export function Map({ places, selectedPlaceId, onPlaceClick, categoryColors, cat
   const markers = useRef<maplibregl.Marker[]>([]);
   const hasFitBounds = useRef(false);
   const [mapReady, setMapReady] = useState(false);
-
-  // Create a stable identifier for the places array
-  const placeIds = useMemo(() => places.map(p => p.id).join(','), [places]);
 
   useEffect(() => {
     if (!mapContainer.current || map.current) return;
@@ -83,7 +80,8 @@ export function Map({ places, selectedPlaceId, onPlaceClick, categoryColors, cat
     } else {
       fitBoundsOnLoad();
     }
-  }, []); // Empty deps - only run once
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run once on mount to initialize bounds
 
   // Create/update markers when places change
   useEffect(() => {
@@ -162,6 +160,8 @@ export function Map({ places, selectedPlaceId, onPlaceClick, categoryColors, cat
 
       markers.current.push(marker);
     });
+    // selectedPlaceId intentionally excluded - handled by separate useEffect for performance
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [places, categoryColors, categoryEmoji, onPlaceClick, mapReady]);
 
   // Update marker styles when selection changes (without recreating them)
@@ -181,7 +181,7 @@ export function Map({ places, selectedPlaceId, onPlaceClick, categoryColors, cat
         }
       }
     });
-  }, [selectedPlaceId]);
+  }, [selectedPlaceId]); // Only update marker styles on selection change, not on full marker recreation
 
   // Fly to selected place when clicked from list (but not when deselected)
   useEffect(() => {
