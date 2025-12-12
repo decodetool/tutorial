@@ -1,0 +1,119 @@
+/* Silk Bottom Sheet Styles */
+
+.BottomSheet-view {
+  z-index: 9999;
+}
+
+.BottomSheet-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 90vh;
+  height: fit-content;
+  border-radius: 24px 24px 0 0;
+  background-color: #121820;
+  box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box !important;
+  margin: 0px 10px !important;
+  overflow: hidden; /* Clip children to border-radius */
+  padding-bottom: 6px;
+}
+
+.BottomSheet-handle {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  cursor: grab;
+  z-index: 100;
+  pointer-events: none; /* Let swipes pass through */
+}
+
+.BottomSheet-handle:active {
+  cursor: grabbing;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.BottomSheet-innerContent {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.BottomSheet-innerContent::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure content has proper spacing from handle and bottom */
+.BottomSheet-innerContent > div {
+  padding-top: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.BottomSheet-bleedingBackground {
+  border-radius: 24px 24px 0 0;
+  background-color: #121820;
+  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.3), 0 -8px 16px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+.BottomSheet-handle {
+  position: absolute !important;
+  top: 12px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 40px !important;
+  height: 5px !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 3px !important;
+  cursor: grab !important;
+  z-index: 10 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.BottomSheet-handle:active {
+  cursor: grabbing !important;
+}
+
+.BottomSheet-header {
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.BottomSheet-body {
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.BottomSheet-body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Focus styles for accessibility */
+.BottomSheet-content:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: -2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .BottomSheet-content {
+    transition: none;
+  }
+}
