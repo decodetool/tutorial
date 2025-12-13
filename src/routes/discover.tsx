@@ -37,19 +37,33 @@ function DiscoverComponent() {
   });
 
   const seasons = ['Winter Escapes', 'Spring Blooms', 'Summer Vibes', 'Fall Colors'];
-  const [selectedSeason, setSelectedSeason] = useState(0);
+  const [selectedSeason, setSelectedSeason] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   // Get selected city and place from URL params
   const selectedCity = cities?.find(c => c.id === searchParams.city);
   const selectedPlace = allPlaces?.find(p => p.id === searchParams.place);
 
-  const filteredCities = cities?.filter(city =>
-    searchQuery === '' ||
-    city.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    city.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    city.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+  // Map seasons to cities that fit the theme
+  const seasonToCitiesMap: Record<number, string[]> = {
+    0: ['tokyo', 'istanbul', 'mexico-city'], // Winter Escapes - cities great in winter
+    1: ['paris', 'barcelona', 'lisbon'], // Spring Blooms - cities with spring attractions
+    2: ['barcelona', 'lisbon', 'bangkok'], // Summer Vibes - beach/summer destinations
+    3: ['tokyo', 'paris', 'mexico-city', 'istanbul'], // Fall Colors - cities with autumn beauty
+  };
+
+  const filteredCities = cities?.filter(city => {
+    // Filter by search query
+    const matchesSearch = searchQuery === '' ||
+      city.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      city.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      city.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    // Filter by selected season (if one is selected)
+    const matchesSeason = selectedSeason === null || seasonToCitiesMap[selectedSeason]?.includes(city.id);
+
+    return matchesSearch && matchesSeason;
+  });
 
   if (isLoading) {
     return (
@@ -114,7 +128,7 @@ function DiscoverComponent() {
           {seasons.map((season, index) => (
             <motion.button
               key={season}
-              onClick={() => setSelectedSeason(index)}
+              onClick={() => setSelectedSeason(selectedSeason === index ? null : index)}
               className={`px-4 py-2 rounded-2xl text-sm font-medium whitespace-nowrap transition-all ${
                 selectedSeason === index
                   ? 'bg-accent-cyan text-background'
@@ -181,6 +195,10 @@ function DiscoverComponent() {
 function CityCard({ city, index }: { city: City; index: number }) {
   const navigate = useNavigate();
 
+  const handleCardClick = () => {
+    navigate({ to: '/discover', search: { city: city.id } });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -189,7 +207,10 @@ function CityCard({ city, index }: { city: City; index: number }) {
       className="group relative"
     >
       {/* Card */}
-      <div className="relative overflow-hidden rounded-3xl bg-surface border border-white/5 hover:border-white/10 transition-all">
+      <div
+        onClick={handleCardClick}
+        className="relative overflow-hidden rounded-3xl bg-surface border border-white/5 hover:border-white/10 transition-all cursor-pointer"
+      >
         {/* Image */}
         <div className="relative h-48 overflow-hidden">
           {city.imageUrl ? (
@@ -242,7 +263,6 @@ function CityCard({ city, index }: { city: City; index: number }) {
 
           {/* CTA */}
           <motion.button
-            onClick={() => navigate({ to: '/discover', search: { city: city.id } })}
             className="mt-4 w-full py-3 bg-gradient-to-r from-accent-teal to-accent-cyan text-background rounded-2xl font-medium"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

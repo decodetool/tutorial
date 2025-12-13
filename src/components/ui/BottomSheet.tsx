@@ -47,7 +47,6 @@ export function BottomSheet({
             mass: 1.5,
           }}
           onTravelStatusChange={(status) => {
-            setRestingOutside(status === "idleOutside");
             if (status === "idleOutside") {
               onOpenChange(false);
             }

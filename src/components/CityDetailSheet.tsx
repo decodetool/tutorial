@@ -3,6 +3,7 @@ import { MapPin, Calendar } from 'lucide-react';
 import type { City, Place } from '@/types';
 import { BottomSheet } from './ui/BottomSheet';
 import { useState } from 'react';
+import { useNavigate } from '@tanstack/react-router';
 
 interface CityDetailSheetProps {
   city: City;
@@ -13,9 +14,21 @@ interface CityDetailSheetProps {
 
 export function CityDetailSheet({ city, places, isOpen, onClose }: CityDetailSheetProps) {
   const [imageError, setImageError] = useState(false);
+  const navigate = useNavigate();
 
   // Filter places for this city
   const cityPlaces = places.filter(p => p.cityId === city.id);
+
+  // Map cities to their corresponding trips
+  const cityToTripMap: Record<string, string> = {
+    'lisbon': 'trip-1',
+    'tokyo': 'trip-2',
+    'barcelona': 'trip-3',
+    'mexico-city': 'trip-4',
+    'paris': 'trip-5',
+  };
+
+  const tripId = cityToTripMap[city.id] || 'trip-1'; // fallback to trip-1 if not found
 
   return (
     <BottomSheet isOpen={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -91,6 +104,7 @@ export function CityDetailSheet({ city, places, isOpen, onClose }: CityDetailShe
 
         {/* CTA */}
         <motion.button
+          onClick={() => navigate({ to: '/trips/$tripId', params: { tripId }, search: { tab: 'overview' } })}
           className="w-full py-2.5 bg-gradient-to-r from-accent-teal to-accent-cyan text-background rounded-2xl font-semibold"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
