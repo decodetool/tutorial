@@ -1,5 +1,9 @@
-import { createFileRoute, useSearch, useNavigate } from '@tanstack/react-router';
-import { motion } from 'framer-motion';
+import {
+  createFileRoute,
+  useSearch,
+  useNavigate,
+} from "@tanstack/react-router";
+import { motion } from "framer-motion";
 import {
   MapPin,
   Users,
@@ -8,11 +12,11 @@ import {
   Plane,
   User,
   ChevronRight,
-} from 'lucide-react';
-import { Tabs } from '@/components/ui/Tabs';
-import type { Trip, Message } from '@/types';
+} from "lucide-react";
+import { Tabs } from "@/components/ui/Tabs";
+import type { Trip, Message } from "@/types";
 
-export const Route = createFileRoute('/components/')({
+export const Route = createFileRoute("/components/")({
   component: ComponentGalleryComponent,
   validateSearch: (search: Record<string, unknown>) => {
     return {
@@ -20,12 +24,12 @@ export const Route = createFileRoute('/components/')({
     };
   },
   beforeLoad: () => {
-    document.title = 'Component Gallery - Journeys';
+    document.title = "Component Gallery - Journeys";
   },
 });
 
 function ComponentGalleryComponent() {
-  const searchParams = useSearch({ from: '/components/' });
+  const searchParams = useSearch({ from: "/components/" });
   const selectedComponent = searchParams.component;
 
   // If a specific component is selected, show only that component
@@ -42,40 +46,64 @@ function GalleryGridView() {
 
   const componentSections = [
     {
-      title: 'Timeline & Cards',
-      id: 'cards',
+      title: "Timeline & Cards",
+      id: "cards",
       components: [
-        { id: 'TripTimelineCard', name: 'Trip Timeline Card', category: 'cards' },
-        { id: 'TripCardVariants', name: 'Trip Card Variants', category: 'cards' },
-        { id: 'CityCard', name: 'City Card', category: 'cards' },
-        { id: 'ActivityCard', name: 'Activity Feed Card', category: 'cards' },
+        {
+          id: "TripTimelineCard",
+          name: "Trip Timeline Card",
+          category: "cards",
+        },
+        {
+          id: "TripCardVariants",
+          name: "Trip Card Variants",
+          category: "cards",
+        },
+        { id: "CityCard", name: "City Card", category: "cards" },
+        { id: "ActivityCard", name: "Activity Feed Card", category: "cards" },
       ],
     },
     {
-      title: 'Chat & Messaging',
-      id: 'chat',
+      title: "Chat & Messaging",
+      id: "chat",
       components: [
-        { id: 'MessageBubble', name: 'Message Bubble', category: 'chat' },
-        { id: 'MessageBubbleVariants', name: 'Message Variants', category: 'chat' },
-        { id: 'ConversationItem', name: 'Conversation List Item', category: 'chat' },
+        { id: "MessageBubble", name: "Message Bubble", category: "chat" },
+        {
+          id: "MessageBubbleVariants",
+          name: "Message Variants",
+          category: "chat",
+        },
+        {
+          id: "ConversationItem",
+          name: "Conversation List Item",
+          category: "chat",
+        },
       ],
     },
     {
-      title: 'Navigation',
-      id: 'navigation',
+      title: "Navigation",
+      id: "navigation",
       components: [
-        { id: 'TabsComponent', name: 'Tabs Navigation', category: 'navigation' },
-        { id: 'SettingsItem', name: 'Settings List Item', category: 'navigation' },
+        {
+          id: "TabsComponent",
+          name: "Tabs Navigation",
+          category: "navigation",
+        },
+        {
+          id: "SettingsItem",
+          name: "Settings List Item",
+          category: "navigation",
+        },
       ],
     },
     {
-      title: 'UI Elements',
-      id: 'ui',
+      title: "UI Elements",
+      id: "ui",
       components: [
-        { id: 'DateBadge', name: 'Date Badge', category: 'ui' },
-        { id: 'AvatarGroup', name: 'Avatar Group', category: 'ui' },
-        { id: 'StatusBadges', name: 'Status Badges', category: 'ui' },
-        { id: 'Buttons', name: 'Button Variants', category: 'ui' },
+        { id: "DateBadge", name: "Date Badge", category: "ui" },
+        { id: "AvatarGroup", name: "Avatar Group", category: "ui" },
+        { id: "StatusBadges", name: "Status Badges", category: "ui" },
+        { id: "Buttons", name: "Button Variants", category: "ui" },
       ],
     },
   ];
@@ -91,7 +119,9 @@ function GalleryGridView() {
         >
           Component Gallery
         </motion.h1>
-        <p className="text-text-secondary">Design system showcase for infinite canvas</p>
+        <p className="text-text-secondary">
+          Design system showcase for infinite canvas
+        </p>
       </header>
 
       {/* Component Sections */}
@@ -99,28 +129,43 @@ function GalleryGridView() {
         {componentSections.map((section, sectionIndex) => (
           <div key={section.id}>
             <div className="px-6 mb-4">
-              <h2 className="text-xl font-semibold text-text-primary mb-1">{section.title}</h2>
-              <p className="text-sm text-text-secondary">Click any component to view it in isolation</p>
+              <h2 className="text-xl font-semibold text-text-primary mb-1">
+                {section.title}
+              </h2>
+              <p className="text-sm text-text-secondary">
+                Click any component to view it in isolation
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6">
               {section.components.map((component, componentIndex) => (
                 <motion.button
                   key={component.id}
-                  onClick={() => navigate({ to: '/components', search: { component: component.id } })}
+                  onClick={() =>
+                    navigate({
+                      to: "/components",
+                      search: { component: component.id },
+                    })
+                  }
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: (sectionIndex * 0.1) + (componentIndex * 0.05) }}
+                  transition={{
+                    delay: sectionIndex * 0.1 + componentIndex * 0.05,
+                  }}
                   className="text-left bg-surface border border-white/5 rounded-2xl p-6 hover:bg-white/5 hover:border-accent-cyan/30 transition-all group"
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-base font-semibold text-text-primary">{component.name}</h3>
+                    <h3 className="text-base font-semibold text-text-primary">
+                      {component.name}
+                    </h3>
                     <ArrowRight
                       size={20}
                       className="text-text-secondary group-hover:text-accent-cyan group-hover:translate-x-1 transition-all"
                     />
                   </div>
-                  <div className="text-sm text-text-secondary mb-4">Category: {component.category}</div>
+                  <div className="text-sm text-text-secondary mb-4">
+                    Category: {component.category}
+                  </div>
 
                   {/* Mini Preview */}
                   <div className="bg-background/50 rounded-xl p-3 border border-white/5">
@@ -144,7 +189,7 @@ function SingleComponentView({ componentId }: { componentId: string }) {
       {/* Header */}
       <header className="px-6 pt-12 pb-6">
         <button
-          onClick={() => navigate({ to: '/components' })}
+          onClick={() => navigate({ to: "/components" })}
           className="text-accent-cyan hover:text-accent-teal transition-colors mb-4 flex items-center gap-2"
         >
           <ArrowRight size={16} className="rotate-180" />
@@ -170,76 +215,86 @@ function SingleComponentView({ componentId }: { componentId: string }) {
   );
 }
 
-function ComponentPreview({ componentId, mini = false }: { componentId: string; mini?: boolean }) {
+function ComponentPreview({
+  componentId,
+  mini = false,
+}: {
+  componentId: string;
+  mini?: boolean;
+}) {
   // Mock data
   const mockTrip: Trip = {
-    id: 'trip-1',
-    name: 'Tokyo Adventure',
-    destination: 'Tokyo, Japan',
-    startDate: '2024-06-15',
-    endDate: '2024-06-22',
-    status: 'upcoming',
+    id: "trip-1",
+    name: "Tokyo Adventure",
+    destination: "Tokyo, Japan",
+    startDate: "2024-06-15",
+    endDate: "2024-06-22",
+    status: "upcoming",
     places: [],
     travelers: [
-      { id: '1', name: 'Sarah Chen', avatar: '' },
-      { id: '2', name: 'Alex Rivera', avatar: '' },
+      { id: "1", name: "Sarah Chen", avatar: "" },
+      { id: "2", name: "Alex Rivera", avatar: "" },
     ],
     budget: 3500,
-    createdAt: '2024-01-15',
-    updatedAt: '2024-01-20',
+    createdAt: "2024-01-15",
+    updatedAt: "2024-01-20",
   };
 
   const mockMessage: Message = {
-    id: 'msg-1',
-    conversationId: 'conv-1',
-    senderId: '1',
-    text: 'Hey! Are we still on for Tokyo next month?',
-    timestamp: new Date('2024-01-20T10:30:00'),
+    id: "msg-1",
+    conversationId: "conv-1",
+    senderId: "1",
+    text: "Hey! Are we still on for Tokyo next month?",
+    timestamp: new Date("2024-01-20T10:30:00"),
     read: true,
   };
 
   switch (componentId) {
-    case 'TripTimelineCard':
+    case "TripTimelineCard":
       return <TripTimelineCardExample trip={mockTrip} mini={mini} />;
 
-    case 'TripCardVariants':
+    case "TripCardVariants":
       return <TripCardVariantsExample mini={mini} />;
 
-    case 'MessageBubble':
+    case "MessageBubble":
       return <MessageBubbleExample message={mockMessage} mini={mini} />;
 
-    case 'MessageBubbleVariants':
+    case "MessageBubbleVariants":
       return <MessageBubbleVariantsExample />;
 
-    case 'ConversationItem':
+    case "ConversationItem":
       return <ConversationItemExample mini={mini} />;
 
-    case 'ActivityCard':
-      return <ActivityCardExample />;
+    case "ActivityCard":
+      return <ActivityCardExample mini={mini} />;
 
-    case 'TabsComponent':
+    case "TabsComponent":
       return <TabsComponentExample mini={mini} />;
 
-    case 'SettingsItem':
+    case "SettingsItem":
       return <SettingsItemExample mini={mini} />;
 
-    case 'DateBadge':
+    case "DateBadge":
       return <DateBadgeExample mini={mini} />;
 
-    case 'AvatarGroup':
+    case "AvatarGroup":
       return <AvatarGroupExample mini={mini} />;
 
-    case 'StatusBadges':
+    case "StatusBadges":
       return <StatusBadgesExample mini={mini} />;
 
-    case 'Buttons':
+    case "Buttons":
       return <ButtonsExample mini={mini} />;
 
-    case 'CityCard':
+    case "CityCard":
       return <CityCardExample mini={mini} />;
 
     default:
-      return <div className="text-text-secondary">Component preview not available</div>;
+      return (
+        <div className="text-text-secondary">
+          Component preview not available
+        </div>
+      );
   }
 }
 
@@ -247,9 +302,15 @@ function ComponentPreview({ componentId, mini = false }: { componentId: string; 
 // Component Examples
 // ============================================================================
 
-function TripTimelineCardExample({ trip, mini }: { trip: Trip; mini?: boolean }) {
+function TripTimelineCardExample({
+  trip,
+  mini,
+}: {
+  trip: Trip;
+  mini?: boolean;
+}) {
   return (
-    <div className={mini ? '' : 'space-y-4'}>
+    <div className={mini ? "" : "space-y-4"}>
       <div className="relative flex gap-3 p-4 rounded-2xl border bg-accent-cyan/10 border-accent-cyan/30 hover:scale-[1.02] transition-all">
         {/* Date Badge */}
         <div className="flex-shrink-0 w-16 flex flex-col items-center justify-center bg-gradient-to-br from-accent-teal to-accent-cyan rounded-xl p-2 text-background">
@@ -260,8 +321,12 @@ function TripTimelineCardExample({ trip, mini }: { trip: Trip; mini?: boolean })
         {/* Trip Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2 mb-1">
-            <h3 className="text-base font-semibold text-text-primary">{trip.name}</h3>
-            <span className="text-xs text-text-secondary whitespace-nowrap">8d</span>
+            <h3 className="text-base font-semibold text-text-primary">
+              {trip.name}
+            </h3>
+            <span className="text-xs text-text-secondary whitespace-nowrap">
+              8d
+            </span>
           </div>
 
           <div className="flex items-center gap-1.5 text-text-secondary text-sm mb-2">
@@ -290,8 +355,14 @@ function TripTimelineCardExample({ trip, mini }: { trip: Trip; mini?: boolean })
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p className="mb-2"><strong>Usage:</strong> Timeline card for trip lists with date badge and traveler avatars</p>
-          <p><strong>States:</strong> upcoming (cyan), planning (teal), completed (gray)</p>
+          <p className="mb-2">
+            <strong>Usage:</strong> Timeline card for trip lists with date badge
+            and traveler avatars
+          </p>
+          <p>
+            <strong>States:</strong> upcoming (cyan), planning (teal), completed
+            (gray)
+          </p>
         </div>
       )}
     </div>
@@ -300,25 +371,48 @@ function TripTimelineCardExample({ trip, mini }: { trip: Trip; mini?: boolean })
 
 function TripCardVariantsExample({ mini }: { mini?: boolean }) {
   const variants = [
-    { status: 'upcoming', label: 'Upcoming', bgClass: 'bg-accent-cyan/10 border-accent-cyan/30' },
-    { status: 'planning', label: 'Planning', bgClass: 'bg-accent-teal/10 border-accent-teal/30' },
-    { status: 'completed', label: 'Completed', bgClass: 'bg-text-secondary/10 border-text-secondary/20' },
+    {
+      status: "upcoming",
+      label: "Upcoming",
+      bgClass: "bg-accent-cyan/10 border-accent-cyan/30",
+    },
+    {
+      status: "planning",
+      label: "Planning",
+      bgClass: "bg-accent-teal/10 border-accent-teal/30",
+    },
+    {
+      status: "completed",
+      label: "Completed",
+      bgClass: "bg-text-secondary/10 border-text-secondary/20",
+    },
   ];
 
   return (
-    <div className={mini ? 'space-y-2' : 'space-y-4'}>
+    <div className={mini ? "space-y-2" : "space-y-4"}>
       {variants.map((variant) => (
-        <div key={variant.status} className={`p-3 rounded-xl border ${variant.bgClass}`}>
-          <div className="text-sm font-medium text-text-primary">{variant.label}</div>
+        <div
+          key={variant.status}
+          className={`p-3 rounded-xl border ${variant.bgClass}`}
+        >
+          <div className="text-sm font-medium text-text-primary">
+            {variant.label}
+          </div>
         </div>
       ))}
     </div>
   );
 }
 
-function MessageBubbleExample({ message, mini }: { message: Message; mini?: boolean }) {
+function MessageBubbleExample({
+  message,
+  mini,
+}: {
+  message: Message;
+  mini?: boolean;
+}) {
   return (
-    <div className={mini ? '' : 'space-y-4'}>
+    <div className={mini ? "" : "space-y-4"}>
       <div className="flex gap-3">
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-teal to-accent-cyan flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
           S
@@ -333,8 +427,13 @@ function MessageBubbleExample({ message, mini }: { message: Message; mini?: bool
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p className="mb-2"><strong>Usage:</strong> Chat message bubble with sender avatar</p>
-          <p><strong>Variants:</strong> Sent (right-aligned, gradient), Received (left-aligned, surface)</p>
+          <p className="mb-2">
+            <strong>Usage:</strong> Chat message bubble with sender avatar
+          </p>
+          <p>
+            <strong>Variants:</strong> Sent (right-aligned, gradient), Received
+            (left-aligned, surface)
+          </p>
         </div>
       )}
     </div>
@@ -380,7 +479,9 @@ function ConversationItemExample({ mini }: { mini?: boolean }) {
             <span className="text-xs text-text-secondary">2h ago</span>
           </div>
           <div className="flex items-center justify-between">
-            <p className="text-sm text-text-secondary truncate">Can't wait for the trip!</p>
+            <p className="text-sm text-text-secondary truncate">
+              Can't wait for the trip!
+            </p>
             <div className="flex-shrink-0 w-5 h-5 bg-accent-cyan rounded-full flex items-center justify-center text-background text-xs font-semibold ml-2">
               2
             </div>
@@ -390,14 +491,17 @@ function ConversationItemExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Conversation list item with avatar, preview, unread badge</p>
+          <p>
+            <strong>Usage:</strong> Conversation list item with avatar, preview,
+            unread badge
+          </p>
         </div>
       )}
     </div>
   );
 }
 
-function ActivityCardExample() {
+function ActivityCardExample({ mini }: { mini?: boolean }) {
   return (
     <div>
       <div className="flex gap-3 p-4 bg-surface rounded-xl border border-white/5">
@@ -408,14 +512,18 @@ function ActivityCardExample() {
           <p className="text-sm text-text-primary mb-1">
             <span className="font-semibold">Sarah Chen</span> created a new trip
           </p>
-          <p className="text-sm text-accent-cyan">Tokyo Adventure → Tokyo, Japan</p>
+          <p className="text-sm text-accent-cyan">
+            Tokyo Adventure → Tokyo, Japan
+          </p>
           <p className="text-xs text-text-secondary mt-2">2 hours ago</p>
         </div>
       </div>
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Activity feed card with icon and user action</p>
+          <p>
+            <strong>Usage:</strong> Activity feed card with icon and user action
+          </p>
         </div>
       )}
     </div>
@@ -424,9 +532,9 @@ function ActivityCardExample() {
 
 function TabsComponentExample({ mini }: { mini?: boolean }) {
   const tabs = [
-    { id: 'all', label: 'All', count: 24 },
-    { id: 'upcoming', label: 'Upcoming', count: 5 },
-    { id: 'past', label: 'Past', count: 15 },
+    { id: "all", label: "All", count: 24 },
+    { id: "upcoming", label: "Upcoming", count: 5 },
+    { id: "past", label: "Past", count: 15 },
   ];
 
   return (
@@ -435,7 +543,10 @@ function TabsComponentExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Animated tab navigation with counts and gradient active state</p>
+          <p>
+            <strong>Usage:</strong> Animated tab navigation with counts and
+            gradient active state
+          </p>
         </div>
       )}
     </div>
@@ -452,7 +563,9 @@ function SettingsItemExample({ mini }: { mini?: boolean }) {
           </div>
           <div className="flex-1 text-left min-w-0">
             <p className="font-medium text-text-primary">Profile</p>
-            <p className="text-sm text-text-secondary truncate">Edit your personal information</p>
+            <p className="text-sm text-text-secondary truncate">
+              Edit your personal information
+            </p>
           </div>
           <ChevronRight size={20} className="text-text-secondary" />
         </button>
@@ -460,7 +573,10 @@ function SettingsItemExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Settings list item with icon, label, description, and chevron</p>
+          <p>
+            <strong>Usage:</strong> Settings list item with icon, label,
+            description, and chevron
+          </p>
         </div>
       )}
     </div>
@@ -477,7 +593,9 @@ function DateBadgeExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary flex items-center">
-          <p><strong>Usage:</strong> Date badge for timeline cards</p>
+          <p>
+            <strong>Usage:</strong> Date badge for timeline cards
+          </p>
         </div>
       )}
     </div>
@@ -485,7 +603,7 @@ function DateBadgeExample({ mini }: { mini?: boolean }) {
 }
 
 function AvatarGroupExample({ mini }: { mini?: boolean }) {
-  const users = ['S', 'A', 'M'];
+  const users = ["S", "A", "M"];
 
   return (
     <div>
@@ -505,7 +623,9 @@ function AvatarGroupExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Overlapping avatar group with overflow count</p>
+          <p>
+            <strong>Usage:</strong> Overlapping avatar group with overflow count
+          </p>
         </div>
       )}
     </div>
@@ -527,7 +647,9 @@ function StatusBadgesExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="w-full text-sm text-text-secondary mt-2">
-          <p><strong>Usage:</strong> Status pills for various states</p>
+          <p>
+            <strong>Usage:</strong> Status pills for various states
+          </p>
         </div>
       )}
     </div>
@@ -549,7 +671,9 @@ function ButtonsExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> Button variants with different styles</p>
+          <p>
+            <strong>Usage:</strong> Button variants with different styles
+          </p>
         </div>
       )}
     </div>
@@ -579,7 +703,9 @@ function CityCardExample({ mini }: { mini?: boolean }) {
 
       {!mini && (
         <div className="text-sm text-text-secondary mt-4">
-          <p><strong>Usage:</strong> City card with gradient overlay and stats</p>
+          <p>
+            <strong>Usage:</strong> City card with gradient overlay and stats
+          </p>
         </div>
       )}
     </div>
