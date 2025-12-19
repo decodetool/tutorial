@@ -182,35 +182,9 @@ function GalleryGridView() {
 }
 
 function SingleComponentView({ componentId }: { componentId: string }) {
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen pb-24">
-      {/* Header */}
-      <header className="px-6 pt-12 pb-6">
-        <button
-          onClick={() => navigate({ to: "/components" })}
-          className="text-accent-cyan hover:text-accent-teal transition-colors mb-4 flex items-center gap-2"
-        >
-          <ArrowRight size={16} className="rotate-180" />
-          Back to Gallery
-        </button>
-        <motion.h1
-          className="text-3xl font-bold text-text-primary mb-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          {componentId}
-        </motion.h1>
-        <p className="text-text-secondary">Component showcase</p>
-      </header>
-
-      {/* Component Display */}
-      <div className="px-6">
-        <div className="bg-surface border border-white/5 rounded-3xl p-8">
-          <ComponentPreview componentId={componentId} />
-        </div>
-      </div>
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <ComponentPreview componentId={componentId} />
     </div>
   );
 }

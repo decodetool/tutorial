@@ -1,4 +1,4 @@
-import { Link, useLocation } from '@tanstack/react-router';
+import { Link, useLocation, useSearch } from '@tanstack/react-router';
 import { MapPin, Users, Sparkles, Plane, MessageCircle, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -20,6 +20,15 @@ const navItems: NavItem[] = [
 export function AppShell({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const isSettingsActive = location.pathname.startsWith('/settings');
+
+  // Check if we're viewing a single component (hide UI chrome in this case)
+  const searchParams = new URLSearchParams(location.search);
+  const isSingleComponentView = location.pathname === '/components' && searchParams.has('component');
+
+  // If viewing a single component, render without any UI chrome
+  if (isSingleComponentView) {
+    return <>{children}</>;
+  }
 
   return (
     <div className="h-screen flex flex-col bg-background">
