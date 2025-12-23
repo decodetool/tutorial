@@ -225,6 +225,50 @@
         "index": "aQyzk4My",
         "typeName": "shape"
       },
+      "shape:Q_oDyqGPKZWQY0qlMelCl": {
+        "x": 9503.717885086788,
+        "y": 1936.7172278052915,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:Q_oDyqGPKZWQY0qlMelCl",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1158.8173975299574,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 3.4275823658887243,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Examples prompts from video"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "acxjs8zG",
+        "typeName": "shape"
+      },
       "shape:Yx5Cd3j1w-t1Gcep7rV-n": {
         "x": -2448.963608838931,
         "y": 1506.408555382178,
@@ -648,6 +692,24 @@
         "index": "aPUhOuLG",
         "typeName": "shape"
       },
+      "shape:to7HfYwmaEgG3eK4PndoB": {
+        "x": 9504.334731984769,
+        "y": 1252.5438414704597,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:to7HfYwmaEgG3eK4PndoB",
+        "type": "embed",
+        "props": {
+          "w": 1155.1946820586345,
+          "h": 649.7970086579819,
+          "url": "https://www.youtube.com/watch?v=dF965LjTK4k"
+        },
+        "parentId": "page:page",
+        "index": "adM5LeaV",
+        "typeName": "shape"
+      },
       "shape:N4sFgBTZtaH9CzBANKxIb": {
         "x": 3119.4231589620285,
         "y": 1548.5291319887833,
@@ -738,6 +800,84 @@
         },
         "parentId": "page:page",
         "index": "aHzzT2sQ1",
+        "typeName": "shape"
+      },
+      "shape:fWAjhYZNjk8C24HAzv8eW": {
+        "x": 9495.5911034982,
+        "y": 2105.3435697924065,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:fWAjhYZNjk8C24HAzv8eW",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1388.3596224147584,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.519994776929794,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "\"Find and add all the top level screens of this app\""
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "abPpN2yV",
+        "typeName": "shape"
+      },
+      "shape:hc3KHlaCaiqFaYIxK9ojN": {
+        "x": 9497.83682482268,
+        "y": 2231.2652588650562,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:hc3KHlaCaiqFaYIxK9ojN",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1229.3046395802598,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.519994776929794,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "\"Find and add all components in the gallery\""
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "abzAirN8",
         "typeName": "shape"
       },
       "shape:gaROvJfh2n35qMDS-zuyO": {
@@ -1849,8 +1989,8 @@
       {
         "pageId": "page:page",
         "camera": {
-          "x": -7823.781854074081,
-          "y": -21.99186695558184,
+          "x": -7807.900509900947,
+          "y": -358.67636342571774,
           "z": 0.3148348115559933
         },
         "selectedShapeIds": [],

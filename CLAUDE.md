@@ -145,6 +145,24 @@ The `/components` route provides a comprehensive design system showcase:
 - Visual regression testing
 - Design review sessions
 
+**Sizing Components for Webviews**:
+When adding component gallery items to boards in Decode:
+1. **ALWAYS analyze the component code first** to estimate its natural rendered size
+2. Components in isolation view (`?component=X`) are centered with minimal chrome
+3. Most UI components are much smaller than full mobile views - avoid generic dimensions
+4. Size webviews to **tightly fit the component content**, leaving minimal blank space
+5. **Inspect the JSX structure** to understand component dimensions:
+   - Check hardcoded width/height values
+   - Look at padding, text sizes, and nested elements
+   - Consider that the component renders centered in the viewport
+6. **Size guidelines by component type**:
+   - Small atomic components (badges, pills, single buttons): ~100-250w x 40-100h
+   - Avatar groups, status indicators: ~150-250w x 50-100h
+   - Medium components (cards, list items, forms): ~300-450w x 100-250h
+   - Large cards with rich content: ~350-500w x 250-450h
+   - Button groups (3+ buttons stacked): ~250-350w x 200-300h
+7. **Err on the side of compact** - it's better to be slightly too small than show excessive blank space
+
 ### Path Alias
 
 `@/` is aliased to `./src/` in `vite.config.ts`. Always use this for imports:
