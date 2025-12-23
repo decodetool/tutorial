@@ -225,6 +225,50 @@
         "index": "aQyzk4My",
         "typeName": "shape"
       },
+      "shape:Q_oDyqGPKZWQY0qlMelCl": {
+        "x": 9503.717885086788,
+        "y": 1936.7172278052915,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:Q_oDyqGPKZWQY0qlMelCl",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1158.8173975299574,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 3.4275823658887243,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Examples prompts from video"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "acxjs8zG",
+        "typeName": "shape"
+      },
       "shape:Yx5Cd3j1w-t1Gcep7rV-n": {
         "x": -2448.963608838931,
         "y": 1506.408555382178,
@@ -336,7 +380,7 @@
           "font": "sans",
           "textAlign": "start",
           "autoSize": false,
-          "scale": 2.1222874938433027,
+          "scale": 1.94859976954623,
           "richText": {
             "type": "doc",
             "content": [
@@ -348,7 +392,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Visual Edits and Referencing UI Elements"
+                    "text": "Visual Edits & Referencing UI Elements"
                   }
                 ]
               }
@@ -648,6 +692,24 @@
         "index": "aPUhOuLG",
         "typeName": "shape"
       },
+      "shape:to7HfYwmaEgG3eK4PndoB": {
+        "x": 9504.334731984769,
+        "y": 1252.5438414704597,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:to7HfYwmaEgG3eK4PndoB",
+        "type": "embed",
+        "props": {
+          "w": 1155.1946820586345,
+          "h": 649.7970086579819,
+          "url": "https://www.youtube.com/watch?v=dF965LjTK4k"
+        },
+        "parentId": "page:page",
+        "index": "adM5LeaV",
+        "typeName": "shape"
+      },
       "shape:N4sFgBTZtaH9CzBANKxIb": {
         "x": 3119.4231589620285,
         "y": 1548.5291319887833,
@@ -740,6 +802,84 @@
         "index": "aHzzT2sQ1",
         "typeName": "shape"
       },
+      "shape:fWAjhYZNjk8C24HAzv8eW": {
+        "x": 9495.5911034982,
+        "y": 2105.3435697924065,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:fWAjhYZNjk8C24HAzv8eW",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1388.3596224147584,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.519994776929794,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "\"Find and add all the top level screens of this app\""
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "abPpN2yV",
+        "typeName": "shape"
+      },
+      "shape:hc3KHlaCaiqFaYIxK9ojN": {
+        "x": 9497.83682482268,
+        "y": 2231.2652588650562,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:hc3KHlaCaiqFaYIxK9ojN",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "m",
+          "w": 1229.3046395802598,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.519994776929794,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "\"Find and add all components in the gallery\""
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "abzAirN8",
+        "typeName": "shape"
+      },
       "shape:gaROvJfh2n35qMDS-zuyO": {
         "x": 2237.2282616346124,
         "y": 1273.7962724510783,
@@ -756,6 +896,45 @@
         },
         "parentId": "page:page",
         "index": "aOsNDLRV",
+        "typeName": "shape"
+      },
+      "shape:1D5QtQQD40gQlpWoxEuef": {
+        "x": 9504.334731984769,
+        "y": 886.9165214402283,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:1D5QtQQD40gQlpWoxEuef",
+        "type": "text",
+        "props": {
+          "color": "blue",
+          "size": "xl",
+          "w": 575.2114049663401,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.7686631758617506,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Lesson #7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "aHzzngtHpd",
         "typeName": "shape"
       },
       "shape:LG-l9r-g2WlrorUFd7VVH": {
@@ -1239,6 +1418,45 @@
         "id": "document:document",
         "typeName": "document"
       },
+      "shape:3i8LQjQV5_auiQmJ6sfrg": {
+        "x": 9504.334731984769,
+        "y": 1086.6780081189772,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:3i8LQjQV5_auiQmJ6sfrg",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "xl",
+          "w": 1020.2722920244142,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": false,
+          "scale": 1.8038093277111864,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Use AI to Find & Add  App Screens & Components"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "aJzzvmGxjS",
+        "typeName": "shape"
+      },
       "shape:AmG55cNplEtYXXkage_4D": {
         "x": -2329.436620408878,
         "y": 1691.6282523518744,
@@ -1344,6 +1562,59 @@
         },
         "parentId": "page:page",
         "index": "aJyEdU1u",
+        "typeName": "shape"
+      },
+      "shape:ecFPTR-iTFO_MePvJeQXY": {
+        "x": 8506.474705109225,
+        "y": 1548.5291319887833,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:ecFPTR-iTFO_MePvJeQXY",
+        "type": "arrow",
+        "props": {
+          "kind": "arc",
+          "elbowMidPoint": 0.5,
+          "dash": "draw",
+          "size": "xl",
+          "fill": "none",
+          "color": "blue",
+          "labelColor": "black",
+          "bend": -21.592832963061305,
+          "start": {
+            "x": 272.9997847312188,
+            "y": 21.846198077555982
+          },
+          "end": {
+            "x": 990.2860894983254,
+            "y": -87.11885071075676
+          },
+          "arrowheadStart": "none",
+          "arrowheadEnd": "arrow",
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "next lesson"
+                  }
+                ]
+              }
+            ]
+          },
+          "labelPosition": 0.5,
+          "font": "sans",
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aTyH7b5f",
         "typeName": "shape"
       },
       "shape:5oIk_TlpdRUxYM2lKfYze": {
@@ -1718,9 +1989,9 @@
       {
         "pageId": "page:page",
         "camera": {
-          "x": 3294.9115462128752,
-          "y": -251.0502232386167,
-          "z": 0.4542006670866969
+          "x": -7807.900509900947,
+          "y": -358.67636342571774,
+          "z": 0.3148348115559933
         },
         "selectedShapeIds": [],
         "focusedGroupId": null
