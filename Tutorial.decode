@@ -417,6 +417,24 @@
         },
         "typeName": "binding"
       },
+      "shape:dJmTHRkZp_6VOJ3_vQCgz": {
+        "x": 13719.94497552039,
+        "y": 1252.5438414704597,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:dJmTHRkZp_6VOJ3_vQCgz",
+        "type": "embed",
+        "props": {
+          "w": 1155.1946820586345,
+          "h": 649.7970086579819,
+          "url": "https://www.youtube.com/watch?v=v7MXrd7feXU"
+        },
+        "parentId": "page:page",
+        "index": "afq5jPIV",
+        "typeName": "shape"
+      },
       "shape:8If21ULY3zDsFAnzdG5zS": {
         "x": 7537.393034243492,
         "y": 1086.6780081189772,
@@ -828,7 +846,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -844,7 +862,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #6"
+                    "text": "Lesson #6 (0:52)"
                   }
                 ]
               }
@@ -867,7 +885,7 @@
         "props": {
           "color": "black",
           "size": "xl",
-          "w": 1020.2722920244142,
+          "w": 297.9427763004307,
           "font": "sans",
           "textAlign": "start",
           "autoSize": false,
@@ -1020,7 +1038,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1036,7 +1054,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #7"
+                    "text": "Lesson #7 (0:36)"
                   }
                 ]
               }
@@ -1103,7 +1121,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1119,7 +1137,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #4"
+                    "text": "Lesson #4 (0:32)"
                   }
                 ]
               }
@@ -1196,7 +1214,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1212,7 +1230,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #8"
+                    "text": "Lesson #8 (0:39)"
                   }
                 ]
               }
@@ -1221,6 +1239,45 @@
         },
         "parentId": "page:page",
         "index": "aHzzzrdzVL",
+        "typeName": "shape"
+      },
+      "shape:sx2DhbFjczRa1fSS9IR92": {
+        "x": 13719.94497552039,
+        "y": 886.9165214402283,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:sx2DhbFjczRa1fSS9IR92",
+        "type": "text",
+        "props": {
+          "color": "blue",
+          "size": "xl",
+          "w": 685.8281509144416,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": true,
+          "scale": 2.7686631758617506,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Lesson #9 ()"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "aHzzzw2rT4M",
         "typeName": "shape"
       },
       "shape:TPdC10dntkwh3hYDzTvHC": {
@@ -1297,7 +1354,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 640.3676070604574,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1313,7 +1370,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #1"
+                    "text": "Lesson #1 (0:42)"
                   }
                 ]
               }
@@ -1342,6 +1399,45 @@
         "index": "aSw9UFfG",
         "typeName": "shape"
       },
+      "shape:2ihUrs8tkvpCu3m4RHZiu": {
+        "x": 13719.94497552039,
+        "y": 1086.6780081189772,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 0.75,
+        "meta": {},
+        "id": "shape:2ihUrs8tkvpCu3m4RHZiu",
+        "type": "text",
+        "props": {
+          "color": "black",
+          "size": "xl",
+          "w": 504.5474939659149,
+          "font": "sans",
+          "textAlign": "start",
+          "autoSize": false,
+          "scale": 1.8038093277111864,
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Using Design Inspiration"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "parentId": "page:page",
+        "index": "aJzzzvAXC0V",
+        "typeName": "shape"
+      },
       "shape:gjvbCWcf3N8uieZmM6g7R": {
         "x": 2237.2282616346124,
         "y": 886.9165214402283,
@@ -1354,7 +1450,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1370,7 +1466,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #3"
+                    "text": "Lesson #3 (0:31)"
                   }
                 ]
               }
@@ -1508,7 +1604,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1524,7 +1620,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #5"
+                    "text": "Lesson #5 (0:54)"
                   }
                 ]
               }
@@ -1817,7 +1913,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 575.2114049663401,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1833,7 +1929,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #2"
+                    "text": "Lesson #2 (0:31)"
                   }
                 ]
               }
@@ -1941,6 +2037,59 @@
           "terminal": "end"
         },
         "typeName": "binding"
+      },
+      "shape:c25WqjP813lQQanGaRuFZ": {
+        "x": 12704.012532385763,
+        "y": 1548.5291319887833,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:c25WqjP813lQQanGaRuFZ",
+        "type": "arrow",
+        "props": {
+          "kind": "arc",
+          "elbowMidPoint": 0.5,
+          "dash": "draw",
+          "size": "xl",
+          "fill": "none",
+          "color": "blue",
+          "labelColor": "black",
+          "bend": -21.592832963061305,
+          "start": {
+            "x": 119.79589398608914,
+            "y": 43.80419509062267
+          },
+          "end": {
+            "x": 990.2860894983254,
+            "y": -87.11885071075676
+          },
+          "arrowheadStart": "none",
+          "arrowheadEnd": "arrow",
+          "richText": {
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "attrs": {
+                  "dir": "auto"
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "next lesson"
+                  }
+                ]
+              }
+            ]
+          },
+          "labelPosition": 0.5,
+          "font": "sans",
+          "scale": 1
+        },
+        "parentId": "page:page",
+        "index": "aTzzo6lXr8",
+        "typeName": "shape"
       },
       "binding:-Rr8kN1mjhaWWf3Ws3K9q": {
         "meta": {},
@@ -2138,9 +2287,9 @@
       {
         "pageId": "page:page",
         "camera": {
-          "x": 3345.6429854001462,
-          "y": 152.8195934163,
-          "z": 0.3339624322397978
+          "x": 5204.643020284856,
+          "y": 4118.102014147072,
+          "z": 0.11408067150037676
         },
         "selectedShapeIds": [],
         "focusedGroupId": null
