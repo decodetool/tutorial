@@ -417,24 +417,6 @@
         },
         "typeName": "binding"
       },
-      "shape:dJmTHRkZp_6VOJ3_vQCgz": {
-        "x": 13719.94497552039,
-        "y": 1252.5438414704597,
-        "rotation": 0,
-        "isLocked": false,
-        "opacity": 1,
-        "meta": {},
-        "id": "shape:dJmTHRkZp_6VOJ3_vQCgz",
-        "type": "embed",
-        "props": {
-          "w": 1155.1946820586345,
-          "h": 649.7970086579819,
-          "url": "https://www.youtube.com/watch?v=v7MXrd7feXU"
-        },
-        "parentId": "page:page",
-        "index": "afq5jPIV",
-        "typeName": "shape"
-      },
       "shape:8If21ULY3zDsFAnzdG5zS": {
         "x": 7537.393034243492,
         "y": 1086.6780081189772,
@@ -761,6 +743,24 @@
         },
         "parentId": "page:page",
         "index": "aPUhOuLG",
+        "typeName": "shape"
+      },
+      "shape:YTiA-IQHB4dvr8bjmNDSL": {
+        "x": 13719.94497552039,
+        "y": 1252.5438414704597,
+        "rotation": 0,
+        "isLocked": false,
+        "opacity": 1,
+        "meta": {},
+        "id": "shape:YTiA-IQHB4dvr8bjmNDSL",
+        "type": "embed",
+        "props": {
+          "w": 1155.1946820586345,
+          "h": 649.7970086579819,
+          "url": "https://www.youtube.com/watch?v=_OrWv0I29bk"
+        },
+        "parentId": "page:page",
+        "index": "af8rYKNV",
         "typeName": "shape"
       },
       "shape:to7HfYwmaEgG3eK4PndoB": {
@@ -1253,7 +1253,7 @@
         "props": {
           "color": "blue",
           "size": "xl",
-          "w": 685.8281509144416,
+          "w": 942.881222648356,
           "font": "sans",
           "textAlign": "start",
           "autoSize": true,
@@ -1269,7 +1269,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Lesson #9 ()"
+                    "text": "Lesson #9 (0:38)"
                   }
                 ]
               }
@@ -2287,9 +2287,9 @@
       {
         "pageId": "page:page",
         "camera": {
-          "x": 5204.643020284856,
-          "y": 4118.102014147072,
-          "z": 0.11408067150037676
+          "x": 2587.4043288462426,
+          "y": -610.2589237849692,
+          "z": 0.6954978134673752
         },
         "selectedShapeIds": [],
         "focusedGroupId": null
